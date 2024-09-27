@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import './NavbarDefault.css'
+import './Navbar.css'
 import {
     Navbar,
-    MobileNav,
+    Collapse,
     Typography,
     IconButton,
 } from "@material-tailwind/react";
@@ -55,7 +55,7 @@ export default function NavbarDefault() {
 
     return (
         <Navbar className="mx-auto max-w-screen-xl px-4 py-2 lg:px-8 lg:py-4">
-            <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
+            <div className="container mx-auto flex items-center justify-around text-blue-gray-900">
                 <NavLink
                     to="/"
                     className="mr-4 cursor-pointer py-1.5 font-medium"
@@ -101,11 +101,11 @@ export default function NavbarDefault() {
                     )}
                 </IconButton>
             </div>
-            <MobileNav open={openNav}>
+            <Collapse open={openNav}>
                 <div className="container mx-auto">
                     {navList}
                 </div>
-            </MobileNav>
+            </Collapse>
         </Navbar>
     );
 }
