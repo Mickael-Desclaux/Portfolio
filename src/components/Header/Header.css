@@ -4,9 +4,10 @@ header {
     align-items: center;
     justify-content: center;
     height: 200px;
-    font-size: 24px;
     margin-top: 20px;
-    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    background: #1488CC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
     color: white;
 }
 
@@ -22,6 +23,16 @@ header {
     border-radius: 3px;
 }
 
+#title {
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+#name {
+    font-weight: bold;
+    font-size: 28px;
+}
+
 @media (min-width : 960px) {
     header {
         padding: 100px;
@@ -34,7 +45,6 @@ header {
 
     #title {
         font-size: 28px;
-        text-decoration: underline;
     }
 
     .icon {

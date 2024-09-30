@@ -24,8 +24,7 @@ export default function NavbarDefault() {
                 as="li"
                 variant="small"
                 color="blue-gray"
-                className="flex items-center gap-x-2 p-1 font-medium"
-            >
+                className="flex items-center gap-x-2 p-1 font-medium" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}            >
                 <NavLink to={"/projects"} className={({ isActive }) => isActive ? "active" : undefined}>
                     Mes réalisations
                 </NavLink>
@@ -34,8 +33,7 @@ export default function NavbarDefault() {
                 as="li"
                 variant="small"
                 color="blue-gray"
-                className="flex items-center gap-x-2 p-1 font-medium"
-            >
+                className="flex items-center gap-x-2 p-1 font-medium" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}            >
                 <NavLink to={"/resume"} className={({ isActive }) => isActive ? "active" : undefined}>
                     Mon CV
                 </NavLink>
@@ -44,8 +42,7 @@ export default function NavbarDefault() {
                 as="li"
                 variant="small"
                 color="blue-gray"
-                className="flex items-center gap-x-2 p-1 font-medium"
-            >
+                className="flex items-center gap-x-2 p-1 font-medium" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}            >
                 <NavLink to={"/contact"} className={({ isActive }) => isActive ? "active" : undefined}>
                     Me contacter
                 </NavLink>
@@ -54,7 +51,7 @@ export default function NavbarDefault() {
     );
 
     return (
-        <Navbar className="mx-auto max-w-screen-xl px-4 py-2 lg:px-8 lg:py-4">
+        <Navbar className="mx-auto max-w-screen-xl px-4 py-2 lg:px-8 lg:py-4" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
             <div className="container mx-auto flex items-center justify-around text-blue-gray-900">
                 <NavLink
                     to="/"
@@ -67,8 +64,7 @@ export default function NavbarDefault() {
                     variant="text"
                     className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
                     ripple={false}
-                    onClick={() => setOpenNav(!openNav)}
-                >
+                    onClick={() => setOpenNav(!openNav)} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}                >
                     {openNav ? (
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
