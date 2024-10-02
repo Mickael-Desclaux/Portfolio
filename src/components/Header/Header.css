@@ -17,12 +17,6 @@ header {
     justify-content: space-between;
 }
 
-.icon {
-    max-width: 24px;
-    margin: 10px;
-    border-radius: 3px;
-}
-
 #title {
     text-decoration: underline;
     font-size: 20px;

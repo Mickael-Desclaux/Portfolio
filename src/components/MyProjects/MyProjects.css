@@ -1,26 +1,6 @@
-.my-projects>h3 {
+.projects-list {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    font-size: 32px;
-    background: #1488CC;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
-    color: white;
-    margin-top: 50px;
-    padding: 20px 0px 20px 0px;
-}
-
-img {
-    height: 30%;
-    width: 30%;
-}
-
-@media (min-width : 960px) {
-    .my-projects>h3 {
-        display: flex;
-        justify-content: left;
-        font-size: 32px;       
-        margin-top: 60px;
-        padding: 20px 0px 20px 200px;
-    }
+    align-items: center;
 }

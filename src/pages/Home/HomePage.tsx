@@ -8,7 +8,7 @@ export default function HomePage() {
         <>
             <Header />
             <AboutMe />
-            <MyProjects />
+            <MyProjects/>
         </>
     )
 }

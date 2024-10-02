@@ -1,20 +1,63 @@
+import Project from '../Project/Project'
+import Title from '../Title/Title'
 import './MyProjects.css'
 
 export default function MyProjects() {
     return (
-        <div className="my-projects">
-            <h3>Mes réalisations</h3>
-            <h4>Garage Parrot</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet felis eget ante auctor ultrices. 
-                Vivamus finibus dolor nunc, vel efficitur nisi luctus a. Integer auctor accumsan risus, id consectetur dui 
-                tempus quis. Donec porta odio a felis laoreet ullamcorper. Integer fringilla eros eget sem lacinia, quis 
-                ultrices eros condimentum. Morbi congue nulla nec neque vulputate, id ultrices erat vestibulum. Nullam ultricies 
-                maximus sapien at volutpat. Vestibulum fermentum aliquet arcu, in lobortis ipsum maximus vitae. Sed malesuada mollis 
-                tortor, non consectetur sapien consectetur condimentum. Suspendisse potenti. Integer eget nisl a augue sagittis congue. 
-                Etiam pharetra consequat libero nec pharetra.</p>
-            <img src="../../projects/dice-roll.jpg" alt="Garage Parrot" />
-            <h5>Technologies utilisées :</h5>
-            <h5>Lien GitHub :</h5>
+        <div>
+            <Title title="Mes réalisations" />
+            <div className='projects-list'>
+            <Project
+                title="TravelMates"
+                imageSrc="../../projects/dice-roll.jpg"
+                description="Application open source réalisée en méthode AGILE : équipe de 3 développeurs + lead dev"
+                technologies={[
+                    "../../icons/react.svg",
+                    "../../icons/nest.svg",
+                    "../../icons/node.svg",
+                    "../../icons/express.svg",
+                    "../../icons/tailwind.svg",
+                    "../../icons/mysql.svg"
+                ]}
+                githubLink="https://github.com/Mickael-Desclaux/Evaluation-JavaScript"
+            />
+            <Project
+                title="Garage Parrot"
+                imageSrc="../../projects/dice-roll.jpg"
+                description="Lorem ipsum dolor sit amet"
+                technologies={[
+                    "../../icons/symfony.svg",
+                    "../../icons/bootstrap.svg",
+                    "../../icons/js.svg",
+                    "../../icons/postgresql.svg"]}
+                githubLink="https://github.com/Mickael-Desclaux/Garage_Parrot"
+            />
+            <Project
+                title="Blog de lecture"
+                imageSrc="../../projects/dice-roll.jpg"
+                description="Blog de mes lectures en anglais"
+                technologies={[
+                    "../../icons/ts.svg",
+                    "../../icons/react.svg",
+                    "../../icons/c-sharp.svg",
+                    "../../icons/postgresql.svg",
+                    
+                ]}
+                githubLink="https://github.com/Mickael-Desclaux/MyBlog"
+            />
+            <Project
+                title="Jeu de dés"
+                imageSrc="../../projects/dice-roll.jpg"
+                description="Jeu de dés en JS"
+                technologies={[
+                    "../../icons/html.svg",
+                    "../../icons/css.svg",
+                    "../../icons/js.svg",
+                    "../../icons/bootstrap.svg"
+                ]}
+                githubLink="https://github.com/Mickael-Desclaux/Evaluation-JavaScript"
+            />
+            </div>
         </div>
     )
 }

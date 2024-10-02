@@ -1,10 +1,11 @@
 import ProfileCard from '../ProfileCard/ProfileCard';
+import Title from '../Title/Title';
 import './AboutMe.css';
 
 export default function AboutMe() {
     return (
-        <div className="aboutMe">
-            <h3>À propos de moi</h3>
+        <div>
+            <Title title="À propos de moi"/>
             
             <div className="flex flex-col md:flex-row justify-center items-start aboutMeContent w-full">
                 <div className="md:w-1/2">

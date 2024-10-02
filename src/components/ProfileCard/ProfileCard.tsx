@@ -13,26 +13,26 @@ import {
 export default function ProfileCard() {
 
     return (
-        <Card className="w-96" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-            <CardHeader floated={false} className="h-80" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+        <Card className="w-96">
+            <CardHeader floated={false} className="h-80">
                 <img src="../../profile-card/pdp1.jpg" alt="profile-picture" className="w-full h-full object-cover" />
             </CardHeader>
-            <CardBody className="text-center" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-                <Typography variant="h4" color="blue-gray" className="mb-2" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-                    Mickaël Desclaux-Arramond
+            <CardBody className="text-center">
+                <Typography variant="h4" color="blue-gray" className="mb-2">
+                    Mickaël DESCLAUX-ARRAMOND
                 </Typography>
-                <Typography color="blue-gray" className="font-medium" textGradient placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-                    Développeur web fullstack
+                <Typography color="blue-gray" className="font-large" textGradient>
+                    Développeur Web Fullstack
                 </Typography>
             </CardBody>
-            <CardFooter className="flex justify-center gap-7 pt-1" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+            <CardFooter className="flex justify-center gap-7 pt-1">
                 <Tooltip content="Github">
                     <Typography
                         as="a"
                         href="https://github.com/Mickael-Desclaux"
                         variant="lead"
                         color="blue"
-                        textGradient placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}                    >
+                        textGradient>
                         <FontAwesomeIcon icon={faSquareGithub} size='2x' color='black' />
                     </Typography>
                 </Tooltip>
@@ -42,7 +42,7 @@ export default function ProfileCard() {
                         href="https://www.linkedin.com/in/micka%C3%ABl-desclaux-arramond-933a4a181/"
                         variant="lead"
                         color="light-blue"
-                        textGradient placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}                    >
+                        textGradient>
                         <FontAwesomeIcon icon={faLinkedin} size='2x' color='#0072B1' />
                     </Typography>
                 </Tooltip>
