@@ -1,11 +1,12 @@
+import { Typography } from '@material-tailwind/react'
 import './Header.css'
 
 export default function Header() {
 
     return (
         <header>
-            <h1 id='name'>Mickaël DESCLAUX-ARRAMOND</h1>
-            <h2 id='title'>Développeur Web Fullstack</h2>
+            <Typography variant='h1' id='name'>Mickaël DESCLAUX-ARRAMOND</Typography>
+            <Typography variant='h2' id='title'>Développeur Web Fullstack</Typography>
             <div className='stack-icons'>
                 <img className='icon' src="../../icons/ts.svg" alt="TypeScript" />
                 <img className='icon' src="../../icons/express.svg" alt="ExpressJS" />

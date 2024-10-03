@@ -1,5 +1,4 @@
-import { Card, CardHeader, CardBody, Typography, CardFooter, Tooltip } from '@material-tailwind/react';
-import './Project.css'
+import { Card, CardHeader, CardBody, Typography, Tooltip } from '@material-tailwind/react';
 import { faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -14,16 +13,17 @@ interface ProjectProps {
 export default function Project({ title, description, imageSrc, technologies, githubLink }: ProjectProps) {
 
     return (
-        <Card className="w-full max-w-[48rem] overflow-hidden mt-8">
+        <Card className="m-12 max-w[32rem] flex flex-col md:flex-row">
             <CardHeader
                 floated={false}
                 shadow={false}
                 color="transparent"
-                className="m-0 rounded-none"
+                className="m-0 rounded-none md:w-1/3"
             >
                 <img
                     src={imageSrc}
                     alt={title}
+                    className='object-cover w-full h-full rounded-lg'
                 />
             </CardHeader>
             <CardBody>
@@ -40,23 +40,19 @@ export default function Project({ title, description, imageSrc, technologies, gi
                         ))}
                     </div>
                 </Typography>
+                <Tooltip content="Page GitHub">
+                    <Typography
+                        className='flex align-center mt-10'
+                        as="a"
+                        href={githubLink}
+                        variant="lead"
+                        color="blue-gray"
+                        textGradient>
+                        Visitez la page GitHub de ce projet :
+                        <FontAwesomeIcon icon={faSquareGithub} size='2x' color='black' className='ms-3' />
+                    </Typography>
+                </Tooltip>
             </CardBody>
-            <CardFooter className="flex items-center justify-between">
-                <div className="flex items-center -space-x-3">
-                    <Tooltip content="Page GitHub">
-                        <Typography
-                            className='flex align-center'
-                            as="a"
-                            href={githubLink}
-                            variant="lead"
-                            color="blue-gray"
-                            textGradient>
-                                Visitez la page GitHub de ce projet :
-                            <FontAwesomeIcon icon={faSquareGithub} size='2x' color='black' className='ms-3'/>
-                        </Typography>
-                    </Tooltip>
-                </div>
-            </CardFooter>
         </Card>
     )
 }

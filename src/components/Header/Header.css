@@ -24,7 +24,13 @@ header {
 
 #name {
     font-weight: bold;
-    font-size: 28px;
+    font-size: 24px;
+}
+
+.icon {
+    max-width: 24px;
+    margin: 10px;
+    border-radius: 3px;
 }
 
 @media (min-width : 960px) {

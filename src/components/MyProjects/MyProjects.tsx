@@ -1,12 +1,10 @@
 import Project from '../Project/Project'
 import Title from '../Title/Title'
-import './MyProjects.css'
 
 export default function MyProjects() {
     return (
         <div>
             <Title title="Mes réalisations" />
-            <div className='projects-list'>
             <Project
                 title="TravelMates"
                 imageSrc="../../projects/dice-roll.jpg"
@@ -41,7 +39,7 @@ export default function MyProjects() {
                     "../../icons/react.svg",
                     "../../icons/c-sharp.svg",
                     "../../icons/postgresql.svg",
-                    
+
                 ]}
                 githubLink="https://github.com/Mickael-Desclaux/MyBlog"
             />
@@ -57,7 +55,6 @@ export default function MyProjects() {
                 ]}
                 githubLink="https://github.com/Mickael-Desclaux/Evaluation-JavaScript"
             />
-            </div>
         </div>
     )
 }

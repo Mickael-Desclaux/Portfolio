@@ -1,15 +1,14 @@
 import ProfileCard from '../ProfileCard/ProfileCard';
 import Title from '../Title/Title';
-import './AboutMe.css';
 
 export default function AboutMe() {
     return (
         <div>
             <Title title="À propos de moi"/>
             
-            <div className="flex flex-col md:flex-row justify-center items-start aboutMeContent w-full">
+            <div className="flex flex-col md:flex-row justify-center items-start w-full">
                 <div className="md:w-1/2">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet felis eget ante auctor ultrices. 
+                    <p className='m-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet felis eget ante auctor ultrices. 
                         Vivamus finibus dolor nunc, vel efficitur nisi luctus a. Integer auctor accumsan risus, id consectetur dui 
                         tempus quis. Donec porta odio a felis laoreet ullamcorper. Integer fringilla eros eget sem lacinia, quis 
                         ultrices eros condimentum. Morbi congue nulla nec neque vulputate, id ultrices erat vestibulum. Nullam ultricies 
@@ -19,7 +18,7 @@ export default function AboutMe() {
                         fames ac turpis egestas. Duis pellentesque, turpis sed posuere ultricies, eros sem sollicitudin nunc, aliquet cursus 
                         orci leo vitae dolor. Fusce congue laoreet diam, id feugiat ipsum ultrices et. Donec semper leo non volutpat pretium.</p>
                 </div>
-                <div className="md:w-1/3 mt-6 md:mt-0">
+                <div className="md:w-1/3 mt-6 md:mt-0 flex justify-center w-full">
                     <ProfileCard />
                 </div>
             </div>

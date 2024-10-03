@@ -1,3 +1,4 @@
+import { Typography } from '@material-tailwind/react'
 import './Title.css'
 
 interface TitleProps {
@@ -7,6 +8,6 @@ interface TitleProps {
 export default function Title({title}: TitleProps) {
 
     return (
-        <h3 className='title'>{title}</h3>
+        <Typography variant='h3' color='white' className='title'>{title}</Typography>
     )
 }
