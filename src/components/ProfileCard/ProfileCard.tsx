@@ -17,7 +17,7 @@ export default function ProfileCard() {
     const { darkMode } = useContext(DarkModeContext);
 
     return (
-        <Card className={`bg-${darkMode ? 'slate-900' : 'white'} w-96`}>
+        <Card className={`bg-${darkMode ? 'dark-gray' : 'white'} w-96`}>
             <CardHeader floated={false} className="h-80">
                 <img src="../../profile-card/pdp1.jpg" alt="profile-picture" className="w-full h-full object-cover" />
             </CardHeader>
@@ -25,7 +25,7 @@ export default function ProfileCard() {
                 <Typography variant="h4" color={`${darkMode ? 'white' : 'blue-gray'}`} className="mb-2">
                     Mickaël DESCLAUX-ARRAMOND
                 </Typography>
-                <Typography variant="lead" color={`${darkMode ? 'white' : 'blue-gray'}`} className="font-large">
+                <Typography variant="lead" color={`${darkMode ? 'white' : 'blue-gray'}`} className="font-large underline">
                     Développeur Web Fullstack
                 </Typography>
             </CardBody>

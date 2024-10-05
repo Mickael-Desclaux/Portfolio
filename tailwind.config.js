@@ -8,8 +8,9 @@ module.exports = withMT({
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {}
   },
-  plugins: [],
+  plugins: [
+    // Ajoutez vos plugins ici
+  ]
 });
-

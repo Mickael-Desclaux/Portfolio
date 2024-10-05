@@ -17,7 +17,7 @@ export default function Project({ title, description, imageSrc, technologies, gi
     const {darkMode} = useContext(DarkModeContext)
 
     return (
-        <Card className={`bg-${darkMode ? 'neutral-900' : 'white'} m-12 max-w[32rem] flex flex-col md:flex-row`}>
+        <Card className={`bg-${darkMode ? 'dark-gray' : 'white'} m-12 max-w[32rem] flex flex-col md:flex-row`}>
             <CardHeader
                 floated={false}
                 shadow={false}

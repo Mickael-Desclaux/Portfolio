@@ -56,7 +56,7 @@ export default function NavbarDefault() {
     );
 
     return (
-        <Navbar className={`bg-${darkMode ? 'neutral-900' : 'white'} mx-auto max-w-screen-xl`}>
+        <Navbar className={`bg-${darkMode ? 'dark-gray' : 'white'} mx-auto max-w-screen-xl`}>
             <div className="container mx-auto flex items-center justify-around text-blue-gray-900">
                 <NavLink
                     to="/"
