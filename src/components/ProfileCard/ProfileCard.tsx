@@ -9,19 +9,23 @@ import {
     Typography,
     Tooltip,
 } from "@material-tailwind/react";
+import { useContext } from 'react';
+import { DarkModeContext } from '../../contexts/DarkModeProvider';
 
 export default function ProfileCard() {
 
+    const { darkMode } = useContext(DarkModeContext);
+
     return (
-        <Card className="w-96">
+        <Card className={`bg-${darkMode ? 'slate-900' : 'white'} w-96`}>
             <CardHeader floated={false} className="h-80">
                 <img src="../../profile-card/pdp1.jpg" alt="profile-picture" className="w-full h-full object-cover" />
             </CardHeader>
             <CardBody className="text-center">
-                <Typography variant="h4" color="blue-gray" className="mb-2">
+                <Typography variant="h4" color={`${darkMode ? 'white' : 'blue-gray'}`} className="mb-2">
                     Mickaël DESCLAUX-ARRAMOND
                 </Typography>
-                <Typography color="blue-gray" className="font-large" textGradient>
+                <Typography variant="lead" color={`${darkMode ? 'white' : 'blue-gray'}`} className="font-large">
                     Développeur Web Fullstack
                 </Typography>
             </CardBody>
@@ -31,9 +35,8 @@ export default function ProfileCard() {
                         as="a"
                         href="https://github.com/Mickael-Desclaux"
                         variant="lead"
-                        color="blue"
                         textGradient>
-                        <FontAwesomeIcon icon={faSquareGithub} size='2x' color='black' />
+                        <FontAwesomeIcon icon={faSquareGithub} size='2x' color={`${darkMode ? 'white' : 'black'}`} />
                     </Typography>
                 </Tooltip>
                 <Tooltip content="Linkedin">
@@ -41,7 +44,6 @@ export default function ProfileCard() {
                         as="a"
                         href="https://www.linkedin.com/in/micka%C3%ABl-desclaux-arramond-933a4a181/"
                         variant="lead"
-                        color="light-blue"
                         textGradient>
                         <FontAwesomeIcon icon={faLinkedin} size='2x' color='#0072B1' />
                     </Typography>

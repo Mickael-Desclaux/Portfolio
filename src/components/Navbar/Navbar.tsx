@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import './Navbar.css'
 import {
     Navbar,
@@ -7,9 +7,12 @@ import {
     IconButton,
 } from "@material-tailwind/react";
 import { NavLink } from "react-router-dom";
+import ToggleButton from "../ToggleButton/ToggleButton";
+import { DarkModeContext } from "../../contexts/DarkModeProvider";
 
 export default function NavbarDefault() {
     const [openNav, setOpenNav] = useState(false);
+    const { darkMode } = useContext(DarkModeContext);
 
     React.useEffect(() => {
         window.addEventListener(
@@ -23,7 +26,7 @@ export default function NavbarDefault() {
             <Typography
                 as="li"
                 variant="small"
-                color="blue-gray"
+                color={`${darkMode ? 'white' : 'blue-gray'}`}
                 className="flex items-center gap-x-2 p-1 font-medium">
                 <NavLink
                     to={"/projects"}
@@ -34,7 +37,7 @@ export default function NavbarDefault() {
             <Typography
                 as="li"
                 variant="small"
-                color="blue-gray"
+                color={`${darkMode ? 'white' : 'blue-gray'}`}
                 className="flex items-center gap-x-2 p-1 font-medium">
                 <NavLink to={"/resume"} className={({ isActive }) => isActive ? "active" : undefined}>
                     Mon CV
@@ -43,7 +46,7 @@ export default function NavbarDefault() {
             <Typography
                 as="li"
                 variant="small"
-                color="blue-gray"
+                color={`${darkMode ? 'white' : 'blue-gray'}`}
                 className="flex items-center gap-x-2 p-1 font-medium">
                 <NavLink to={"/contact"} className={({ isActive }) => isActive ? "active" : undefined}>
                     Me contacter
@@ -53,15 +56,18 @@ export default function NavbarDefault() {
     );
 
     return (
-        <Navbar className="mx-auto max-w-screen-xl px-4 py-2 lg:px-8 lg:py-4">
+        <Navbar className={`bg-${darkMode ? 'neutral-900' : 'white'} mx-auto max-w-screen-xl`}>
             <div className="container mx-auto flex items-center justify-around text-blue-gray-900">
                 <NavLink
                     to="/"
-                    className="mr-4 cursor-pointer py-1.5 font-medium"
+                    className={`mr-4 cursor-pointer py-1.5 font-medium ${darkMode ? 'text-white' : 'text-blue-gray'}`}
                 >
                     Accueil
                 </NavLink>
                 <div className="hidden lg:block">{navList}</div>
+                <div className="flex items-center gap-x-1">
+                <ToggleButton/>
+                </div>
                 <IconButton
                     variant="text"
                     className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"

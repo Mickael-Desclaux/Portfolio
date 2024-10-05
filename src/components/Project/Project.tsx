@@ -1,6 +1,8 @@
-import { Card, CardHeader, CardBody, Typography, Tooltip } from '@material-tailwind/react';
+import { Card, CardHeader, CardBody, Typography } from '@material-tailwind/react';
 import { faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useContext } from 'react';
+import { DarkModeContext } from '../../contexts/DarkModeProvider';
 
 interface ProjectProps {
     title: string;
@@ -12,46 +14,43 @@ interface ProjectProps {
 
 export default function Project({ title, description, imageSrc, technologies, githubLink }: ProjectProps) {
 
+    const {darkMode} = useContext(DarkModeContext)
+
     return (
-        <Card className="m-12 max-w[32rem] flex flex-col md:flex-row">
+        <Card className={`bg-${darkMode ? 'neutral-900' : 'white'} m-12 max-w[32rem] flex flex-col md:flex-row`}>
             <CardHeader
                 floated={false}
                 shadow={false}
                 color="transparent"
-                className="m-0 rounded-none md:w-1/3"
+                className="m-0 rounded-none"
             >
                 <img
                     src={imageSrc}
                     alt={title}
-                    className='object-cover w-full h-full rounded-lg'
+                    className='object-cover rounded-lg w-full h-full'
                 />
             </CardHeader>
             <CardBody>
-                <Typography variant="h4" color="blue-gray">
+                <Typography variant="h4" color={`${darkMode ? 'white' : 'blue-gray'}`}>
                     {title}
                 </Typography>
-                <Typography variant="lead" color="gray" className="mt-3 font-normal">
+                <Typography variant="lead" color={`${darkMode ? 'white' : 'blue-gray'}`} className="mt-3 font-normal">
                     {description}
                 </Typography>
-                <Typography variant='h5' className='mt-3'>Technologies utilisées:
-                    <div className="tech-icons flex justify-evenly mt-3">
+                <Typography variant='h5' className='mt-3' color={`${darkMode ? 'white' : 'blue-gray'}`}>Technologies utilisées:
+                    <div className="flex justify-start mt-3">
                         {technologies.map((tech: string, index: number) => (
                             <img src={tech} alt="technologie" className="icon" key={index} />
                         ))}
                     </div>
                 </Typography>
-                <Tooltip content="Page GitHub">
-                    <Typography
-                        className='flex align-center mt-10'
-                        as="a"
-                        href={githubLink}
-                        variant="lead"
-                        color="blue-gray"
-                        textGradient>
-                        Visitez la page GitHub de ce projet :
-                        <FontAwesomeIcon icon={faSquareGithub} size='2x' color='black' className='ms-3' />
-                    </Typography>
-                </Tooltip>
+                <Typography
+                    className='mt-10'
+                    variant="lead"
+                    color={`${darkMode ? 'white' : 'blue-gray'}`}>
+                    Visitez la page GitHub de ce projet :
+                    <a href={githubLink}><FontAwesomeIcon icon={faSquareGithub} size='3x' color={`${darkMode ? 'white' : 'blue-gray'}`} className='ms-3 inline-block align-middle'/></a>
+                </Typography>
             </CardBody>
         </Card>
     )

@@ -1,7 +1,9 @@
+import MyProjects from "../../components/MyProjects/MyProjects";
+
 export default function ProjectsPage() {
     return (
         <div>
-            <h1>Mes Réalisations</h1>
+            <MyProjects/>
         </div>
     )
 }
