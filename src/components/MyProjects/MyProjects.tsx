@@ -1,10 +1,8 @@
 import Project from '../Project/Project'
-import Title from '../Title/Title'
 
 export default function MyProjects() {
     return (
         <div>
-            <Title title="Mes réalisations" />
             <div className='flex justify-center'>
                 <div className='md:w-4/5'>
                     <Project

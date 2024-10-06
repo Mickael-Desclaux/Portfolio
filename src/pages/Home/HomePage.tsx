@@ -6,7 +6,10 @@ export default function HomePage() {
     return (
         <>
             <Header />
-            <AboutMe />
+            <div className="mt-12">
+                <AboutMe />
+            </div>
+
         </>
     )
 }
