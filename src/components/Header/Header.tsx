@@ -4,7 +4,7 @@ import './Header.css'
 export default function Header() {
 
     return (
-        <header>
+        <header className='mt-5'>
             <Typography variant='h1' className='mb-1' id='name'>Mickaël DESCLAUX-ARRAMOND</Typography>
             <Typography variant='h2' className='mb-2' id='title'>Développeur Web Fullstack</Typography>
             <div className='stack-icons'>
