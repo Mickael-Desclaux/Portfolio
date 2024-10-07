@@ -18,7 +18,7 @@ export default function Project({ title, description, imageSrc, technologies, gi
     const { darkMode } = useContext(DarkModeContext)
 
     return (
-        <Card className={`bg-${darkMode ? 'dark-gray' : 'white'} m-10 flex flex-col`}>
+        <Card className={`bg-${darkMode ? 'dark-gray' : 'white'} m-12 flex flex-col`}>
             <CardHeader
                 floated={false}
                 shadow={false}
@@ -29,7 +29,7 @@ export default function Project({ title, description, imageSrc, technologies, gi
                 <img
                     src={imageSrc}
                     alt={title}
-                    className='object-contain rounded w-full md:h-96 self-start'
+                    className='object-contain w-full md:h-96 self-start project-img'
                 />
             </CardHeader>
             <CardBody className='w-full'>
