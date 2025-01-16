@@ -34,24 +34,6 @@ export default function NavbarDefault() {
                     Mes réalisations
                 </NavLink>
             </Typography>
-            <Typography
-                as="li"
-                variant="small"
-                color={`${darkMode ? 'white' : 'blue-gray'}`}
-                className="flex items-center gap-x-2 p-1 font-medium">
-                <NavLink to={"/resume"} className={({ isActive }) => isActive ? "active" : undefined}>
-                    Mon CV
-                </NavLink>
-            </Typography>
-            <Typography
-                as="li"
-                variant="small"
-                color={`${darkMode ? 'white' : 'blue-gray'}`}
-                className="flex items-center gap-x-2 p-1 font-medium">
-                <NavLink to={"/contact"} className={({ isActive }) => isActive ? "active" : undefined}>
-                    Me contacter
-                </NavLink>
-            </Typography>
         </ul>
     );
 

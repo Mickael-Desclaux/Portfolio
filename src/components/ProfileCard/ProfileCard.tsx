@@ -26,7 +26,7 @@ export default function ProfileCard() {
                     Mickaël DESCLAUX-ARRAMOND
                 </Typography>
                 <Typography variant="lead" color={`${darkMode ? 'white' : 'blue-gray'}`} className="font-large underline">
-                    Développeur Web Fullstack
+                    Développeur Web Back-End
                 </Typography>
             </CardBody>
             <CardFooter className="flex justify-center gap-7 pt-1">

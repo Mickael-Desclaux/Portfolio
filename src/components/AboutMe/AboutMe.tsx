@@ -5,20 +5,28 @@ import Title from '../Title/Title';
 export default function AboutMe() {
     return (
         <div>
-            <Title title="À propos de moi"/>
-            
+            <Title title="À propos de moi" />
+
             <div className="flex flex-col md:flex-row w-full justify-center">
                 <div className="md:w-1/2">
-                    <Typography className='m-6' variant='lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet felis eget ante auctor ultrices. 
-                        Vivamus finibus dolor nunc, vel efficitur nisi luctus a. Integer auctor accumsan risus, id consectetur dui 
-                        tempus quis. Donec porta odio a felis laoreet ullamcorper. Integer fringilla eros eget sem lacinia, quis 
-                        ultrices eros condimentum. Morbi congue nulla nec neque vulputate, id ultrices erat vestibulum. Nullam ultricies 
-                        maximus sapien at volutpat. Vestibulum fermentum aliquet arcu, in lobortis ipsum maximus vitae. Sed malesuada mollis 
-                        tortor, non consectetur sapien consectetur condimentum. Suspendisse potenti. Integer eget nisl a augue sagittis congue. 
-                        Etiam pharetra consequat libero nec pharetra. Pellentesque habitant morbi tristique senectus et netus et malesuada 
-                        fames ac turpis egestas. Duis pellentesque, turpis sed posuere ultricies, eros sem sollicitudin nunc, aliquet cursus 
-                        orci leo vitae dolor. Fusce congue laoreet diam, id feugiat ipsum ultrices et. Donec semper leo non volutpat pretium.</Typography>
+                    <Typography className='m-6' variant='lead'>
+                        🚀 Titulaire d’un BAC +2 en Développement Web et Web Mobile, suivi d’un BAC +3/4 en Conception et Développement d’Applications,
+                        j’ai acquis des compétences solides et variées dans le domaine du développement web, tout en affinant ma spécialisation en backend.<br /><br />
+
+                        💻 Mon objectif est de me concentrer sur le développement backend en Java, un domaine qui me passionne pour sa logique, sa gestion
+                        des données et la sécurité des applications. Cette spécialisation reflète mon désir de créer des solutions robustes, performantes
+                        et sécurisées, tout en garantissant une architecture propre et maintenable.<br /><br />
+
+                        📚 Ce parcours m’a permis de développer une grande motivation et une capacité d’apprentissage continue. Je suis convaincu qu'un profil
+                        junior, bien qu'en début de carrière, peut apporter une perspective nouvelle et une forte capacité d'adaptation. Ma curiosité et mon goût 
+                        du challenge m’ont toujours poussé à aller au-delà de mes connaissances pour apprendre, évoluer et relever des défis techniques. Je suis 
+                        prêt à m'investir pleinement dans des projets ambitieux et à grandir aux côtés d’équipes expérimentées.<br /><br />
+
+                        🤝 Je vous invite à découvrir mes projets et à échanger avec moi si vous êtes à la recherche d'un développeur junior passionné, motivé
+                        et en constante évolution !
+                    </Typography>
                 </div>
+
                 <div className="md:w-1/3 mt-6 flex justify-center w-full">
                     <ProfileCard />
                 </div>
