@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import './Navbar.css'
 import {
     Navbar,
     Collapse,
@@ -22,15 +21,15 @@ export default function NavbarDefault() {
     }, []);
 
     const navList = (
-        <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+        <ul className="mt-2 mb-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
             <Typography
                 as="li"
-                variant="small"
+                variant="paragraph"
                 color={`${darkMode ? 'white' : 'blue-gray'}`}
                 className="flex items-center gap-x-2 p-1 font-medium">
                 <NavLink
                     to={"/projects"}
-                    className={({ isActive }) => isActive ? "active" : undefined}>
+                    className={({ isActive }) => isActive ? "underline" : undefined}>
                     Mes réalisations
                 </NavLink>
             </Typography>
@@ -38,14 +37,18 @@ export default function NavbarDefault() {
     );
 
     return (
-        <Navbar className={`bg-${darkMode ? 'dark-gray' : 'white'} mx-auto max-w-screen-xl`}>
+        <Navbar className={`bg-${darkMode ? 'dark-gray' : 'white'} mx-auto max-w-screen-xl border-none`}>
             <div className="container mx-auto flex items-center justify-around text-blue-gray-900">
+                <Typography
+                variant="paragraph">
+
                 <NavLink
                     to="/"
                     className={`mr-4 cursor-pointer py-1.5 font-medium ${darkMode ? 'text-white' : 'text-blue-gray'}`}
                 >
                     Accueil
                 </NavLink>
+                </Typography>
                 <div className="hidden lg:block">{navList}</div>
                 <div className="flex items-center gap-x-1">
                 <ToggleButton/>

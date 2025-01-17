@@ -8,6 +8,6 @@ interface TitleProps {
 export default function Title({title}: TitleProps) {
 
     return (
-        <Typography variant='h3' color='white' className='title flex justify-center mb-8'>{title}</Typography>
+        <Typography variant='h3' color='white' className='title flex justify-center'>{title}</Typography>
     )
 }
