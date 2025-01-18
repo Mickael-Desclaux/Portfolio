@@ -8,7 +8,7 @@ export default function MyProjects() {
     const { darkMode } = useContext(DarkModeContext)
 
     return (
-        <div>
+        <div className='mb-24'>
             <div className='flex justify-center'>
                 <div className='md:w-[50vw]'>
                     <Project
@@ -83,7 +83,7 @@ export default function MyProjects() {
 
                         }
                         technologies={[
-                            "../../icons/java.svg",
+                            "../../icons/java-header.svg",
                             "../../icons/libgdx.png",
                         ]}
                         isCompleted={true}
