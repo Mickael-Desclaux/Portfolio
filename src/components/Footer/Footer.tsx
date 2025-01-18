@@ -57,7 +57,7 @@ export default function Footer() {
                             </div>
                             <div>
                                 <div className="text-sm text-gray-400">{contact.label}</div>
-                                <div className="text-gray-200 text-sm md:text-lg">{contact.value}</div>
+                                <div className="text-gray-200 text-xs md:text-lg">{contact.value}</div>
                             </div>
                             <ExternalLink size={16} className="ml-auto text-gray-400" />
                         </a>
