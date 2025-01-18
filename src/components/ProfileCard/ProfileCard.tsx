@@ -36,7 +36,7 @@ export default function ProfileCard() {
                         href="https://github.com/Mickael-Desclaux"
                         variant="lead"
                         textGradient>
-                        <FontAwesomeIcon icon={faSquareGithub} size='2x' color={`${darkMode ? 'white' : 'black'}`} />
+                        <FontAwesomeIcon icon={faSquareGithub} size='3x' color={`${darkMode ? 'white' : 'black'}`} />
                     </Typography>
                 </Tooltip>
                 <Tooltip content="Linkedin">
@@ -45,7 +45,7 @@ export default function ProfileCard() {
                         href="https://www.linkedin.com/in/micka%C3%ABl-desclaux-arramond-933a4a181/"
                         variant="lead"
                         textGradient>
-                        <FontAwesomeIcon icon={faLinkedin} size='2x' color='#0072B1' />
+                        <FontAwesomeIcon icon={faLinkedin} size='3x' color='#0072B1' />
                     </Typography>
                 </Tooltip>
             </CardFooter>

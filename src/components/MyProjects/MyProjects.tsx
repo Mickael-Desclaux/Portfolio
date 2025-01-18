@@ -1,7 +1,12 @@
 import { Typography } from '@material-tailwind/react'
 import Project from '../Project/Project'
+import { useContext } from 'react'
+import { DarkModeContext } from '../../contexts/DarkModeProvider'
 
 export default function MyProjects() {
+
+    const { darkMode } = useContext(DarkModeContext)
+
     return (
         <div>
             <div className='flex justify-center'>
@@ -208,7 +213,7 @@ export default function MyProjects() {
                                 <Typography
                                     variant='lead'
                                     className='mt-10'
-                                    color='blue-gray'>Vous pouvez vous rendre sur l'application ici: <a href="https://lets-roll-game.netlify.app">
+                                    color={`${darkMode ? 'white' : 'blue-gray'}`}>Vous pouvez vous rendre sur l'application ici: <a href="https://lets-roll-game.netlify.app">
                                         <u>https://lets-roll-game.netlify.app</u></a>
                                 </Typography>
                             </>
@@ -256,7 +261,7 @@ export default function MyProjects() {
                                 <Typography
                                     variant='lead'
                                     className='mt-10'
-                                    color='blue-gray'>Vous pouvez vous rendre sur l'application ici: <a href="https://club-tennis-mickael-desclaux-arramond.netlify.app/">
+                                    color={`${darkMode ? 'white' : 'blue-gray'}`}>Vous pouvez vous rendre sur l'application ici: <a href="https://club-tennis-mickael-desclaux-arramond.netlify.app/">
                                         <u>https://club-tennis-mickael-desclaux-arramond.netlify.app</u></a>
                                 </Typography>
                             </>

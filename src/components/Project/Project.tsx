@@ -47,8 +47,11 @@ export default function Project({ title, description, imageSrc, technologies, gi
                         ))}
                     </div>
                 </Typography>
+                
                 {additionalNote && (
-                    additionalNote
+                    <Typography variant="lead" color={`${darkMode ? 'white' : 'blue-gray'}`} className="mt-3 font-normal">
+                        {additionalNote}
+                    </Typography>
                 )}
 
                 {isCompleted ? (

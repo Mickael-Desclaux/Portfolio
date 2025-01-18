@@ -299,7 +299,7 @@ export default function Skills() {
         <>
             <Title title="Mes compétences" />
             <div className="flex justify-center pb-12">
-                <div className="w-4/5">
+                <div className="w-full m-4 md:w-4/5">
                     <Tabs value="front-end">
                         <TabsHeader>
                             {data.map(({ label, value, icon }) => (

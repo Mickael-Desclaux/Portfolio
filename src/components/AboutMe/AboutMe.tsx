@@ -7,7 +7,7 @@ export default function AboutMe() {
         <div>
             <Title title="À propos de moi" />
 
-            <div className="flex flex-col md:flex-row w-full justify-center">
+            <div className="flex flex-col md:flex-row w-full justify-center mt-4">
                 <div className="md:w-1/2">
                     <Typography className='m-6' variant='lead'>
                         🚀 Titulaire d’un BAC +2 en Développement Web et Web Mobile, suivi d’un BAC +3/4 en Conception et Développement d’Applications,

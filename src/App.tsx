@@ -5,6 +5,7 @@ import NavbarDefault from './components/Navbar/Navbar'
 import ProjectsPage from './pages/Projects/ProjectsPage'
 import { useContext } from 'react'
 import { DarkModeContext } from './contexts/DarkModeProvider'
+import Footer from './components/Footer/Footer'
 
 
 function App() {
@@ -13,11 +14,12 @@ function App() {
 
   return (
     <div className={darkMode ? 'dark-theme' : ''}>
-    <NavbarDefault/>
+      <NavbarDefault />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/projects" element={<ProjectsPage />} />
       </Routes>
+      <Footer />
     </div>
   )
 }
