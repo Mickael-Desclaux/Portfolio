@@ -50,7 +50,8 @@ export default function MyProjects() {
                             "../../icons/jest.svg",
                             "../../icons/cypress.svg"
                         ]}
-                        isCompleted={false}
+                        isCompleted={true}
+                        githubLink='https://github.com/Mickael-Desclaux/TravelMates-Back'
                     />
                     <Project
                         title="Chess"
