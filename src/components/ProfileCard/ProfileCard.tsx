@@ -18,8 +18,12 @@ export default function ProfileCard() {
 
     return (
         <Card className={`bg-${darkMode ? 'dark-gray' : 'white'} w-96`}>
-            <CardHeader floated={false} className="h-80">
-                <img src="../../profile-card/pdp1.jpg" alt="profile-picture" className="w-full h-full object-cover" />
+            <CardHeader floated={false} className="rounded-full overflow-hidden">
+                <img
+                    src="../../profile-card/pdp.png"
+                    alt="profile-picture"
+                    className="w-full h-full object-fit"
+                />
             </CardHeader>
             <CardBody className="text-center">
                 <Typography variant="h4" color={`${darkMode ? 'white' : 'blue-gray'}`} className="mb-2">
